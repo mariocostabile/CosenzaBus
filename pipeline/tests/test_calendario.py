@@ -47,7 +47,9 @@ class TestAttiva(unittest.TestCase):
                   non_lav=[P("2026-12-23", "2026-12-31"), P("2027-01-01", "2027-01-06")])
         self.assertTrue(attiva(c, date(2026, 10, 29), FEST, SCUOLA))
         self.assertFalse(attiva(c, date(2026, 12, 23), FEST, SCUOLA))  # vacanza
-        self.assertFalse(attiva(c, date(2027, 2, 1), FEST, SCUOLA))    # oltre il calendario noto
+        self.assertTrue(attiva(c, date(2027, 2, 1), FEST, SCUOLA))     # oltre il calendario noto: stima
+        self.assertFalse(attiva(c, date(2027, 1, 5), FEST, SCUOLA))    # vacanza dichiarata dalla corsa
+        self.assertFalse(attiva(c, date(2027, 7, 1), FEST, SCUOLA))    # estate stimata
 
     def test_non_scolastica(self):
         c = corsa(tipo="nonSchool")

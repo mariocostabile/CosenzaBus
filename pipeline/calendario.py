@@ -42,7 +42,12 @@ def attiva(corsa: dict, g: date, fest: set, scuola: list) -> bool:
         return False
     if _in(g, corsa["notValidPeriods"]):
         return False
-    a_scuola = any(a <= g <= b for a, b in scuola)
+    if scuola and g <= max(b for _, b in scuola):
+        a_scuola = any(a <= g <= b for a, b in scuola)
+    else:
+        # oltre il calendario CORe (pubblicato a pezzi): anno scolastico stimato 15/9-10/6;
+        # le vacanze stanno nei nonWorkingPeriods delle corse; l'app avvisa dopo scuola_nota_fino
+        a_scuola = (g.month, g.day) >= (9, 15) or (g.month, g.day) <= (6, 10)
     if tipo == "school" and not a_scuola:
         return False
     if tipo == "nonSchool" and a_scuola:
