@@ -1,0 +1,40 @@
+{
+  "operatori": [
+    {"id": 33, "name": "Consorzio Autolinee TPL s.r.l.", "website": "www.consorzioautolineetpl.it"},
+    {"id": 22, "name": "Ferrovie Della Calabria S.R.L.", "website": "www.ferroviedellacalabria.it"}
+  ],
+  "calendario": {
+    "holidays": [{"startDate": "2026-12-08", "endDate": "2026-12-08"}],
+    "schoolPeriods": [{"startDate": "2026-09-15", "endDate": "2026-12-22"}]
+  },
+  "linee": {
+    "256": {"id": 256, "code": "136-A", "travels": [
+      {"legacyCode": 200610, "operatorId": 33, "journeyId": 1526, "travelDirection": "outbound",
+       "code": "136-A-(A)-1-1-L", "message": null, "messageExpire": null,
+       "validPeriods": [], "notValidPeriods": [],
+       "periodicity": {"type": "workingDay", "operatingProfile": {"sunday": false, "monday": true, "tuesday": true, "wednesday": true, "thursday": true, "friday": true, "saturday": true, "holidays": false, "school": false},
+                       "workingPeriods": [{"startDate": "2019-01-01", "endDate": "2019-12-31"}], "nonWorkingPeriods": []},
+       "stops": [
+         {"durfCode": 4162, "name": "Autostazione Cosenza", "latitude": 39.3037919447191, "longitude": 16.253333200746, "time": "17:00"},
+         {"durfCode": 4181, "name": "Viale Giovanni e Francesca Falcone, 158", "latitude": 39.3092819337726, "longitude": 16.2532532000145, "time": "17:02"}]},
+      {"legacyCode": 200999, "operatorId": 33, "journeyId": 1526, "travelDirection": "outbound",
+       "code": "136-A-(A)-1-1-L", "message": "Corsa sospesa", "messageExpire": null,
+       "validPeriods": [], "notValidPeriods": [],
+       "periodicity": {"type": "workingDay", "operatingProfile": {"sunday": false, "monday": true, "tuesday": true, "wednesday": true, "thursday": true, "friday": true, "saturday": true, "holidays": false, "school": false},
+                       "workingPeriods": [], "nonWorkingPeriods": []},
+       "stops": [
+         {"durfCode": 4162, "name": "Autostazione Cosenza", "latitude": 39.3037919447191, "longitude": 16.253333200746, "time": "18:00"},
+         {"durfCode": 4181, "name": "Viale Giovanni e Francesca Falcone, 158", "latitude": 39.3092819337726, "longitude": 16.2532532000145, "time": "18:02"}]}
+    ]},
+    "900": {"id": 900, "code": "7-A", "travels": [
+      {"legacyCode": 5, "operatorId": 22, "journeyId": 9, "travelDirection": "inbound",
+       "code": "7-A-(A)-1-1-D", "message": null, "messageExpire": null,
+       "validPeriods": [], "notValidPeriods": [],
+       "periodicity": {"type": "daily", "operatingProfile": {"sunday": true, "monday": false, "tuesday": false, "wednesday": false, "thursday": false, "friday": false, "saturday": false, "holidays": false, "school": false},
+                       "workingPeriods": [], "nonWorkingPeriods": []},
+       "stops": [
+         {"durfCode": 77, "name": "Acri", "latitude": 39.49, "longitude": 16.38, "time": "23:50"},
+         {"durfCode": 4162, "name": "Autostazione Cosenza", "latitude": 39.3037919447191, "longitude": 16.253333200746, "time": "00:40"}]}
+    ]}
+  }
+}

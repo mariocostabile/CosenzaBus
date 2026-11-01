@@ -1,0 +1,7 @@
+{
+  "urbane": ["33"],
+  "hub": [
+    {"nome": "Autostazione Cosenza", "lat": 39.30379, "lon": 16.25333, "raggio_m": 200},
+    {"nome": "Pensiline Unical", "lat": 39.35600, "lon": 16.22740, "raggio_m": 200}
+  ]
+}

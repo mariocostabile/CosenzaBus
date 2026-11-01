@@ -1,0 +1,66 @@
+name: data
+# Ogni notte: scarica i dati CORe, valida, pubblica su Pages se la versione è cambiata.
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency: pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      cambiata: ${{ steps.build.outputs.cambiata }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test
+        run: python -m unittest discover -s pipeline/tests
+      - name: Build
+        id: build
+        run: |
+          python pipeline/build.py _site/data
+          echo "cambiata=$(cat _site/data/.cambiata)" >> "$GITHUB_OUTPUT"
+          rm _site/data/.cambiata
+          printf '<!doctype html><meta charset="utf-8"><title>CosenzaBus</title><p>Dati: <a href="data/index.json">data/index.json</a></p>' > _site/index.html
+      - name: Issue se la validazione fallisce
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" --label dati-ko \
+            --title "Dati non pubblicati: validazione fallita ($(date -u +%F))" \
+            --body "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID. Report in _site/data/report.json (artifact del run)." \
+            || gh issue create --repo "$GITHUB_REPOSITORY" --title "Dati non pubblicati ($(date -u +%F))" --body "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - name: Report come artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: _site/data/report.json
+          if-no-files-found: ignore
+      - uses: actions/configure-pages@v5
+        if: steps.build.outputs.cambiata == '1'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.build.outputs.cambiata == '1'
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.cambiata == '1'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,79 @@
+# --- Segreti e credenziali -------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.p8
+*.p12
+*.key
+*.keystore
+*.jks
+credentials.json
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+
+# --- Assistenti AI / agenti (config locali, sessioni, memorie) -------------
+# CLAUDE.md è escluso via .git/info/exclude (contesto locale).
+.claude/
+CLAUDE.local.md
+.cursor/
+.cursorignore
+.windsurf/
+.codeium/
+.continue/
+.aider*
+.gemini/
+.agent/
+.agents/
+.copilot/
+.roo/
+.cline/
+.kilocode/
+
+# --- Node / Expo / React Native --------------------------------------------
+node_modules/
+.expo/
+.expo-shared/
+dist/
+web-build/
+expo-env.d.ts
+# generate da `expo prebuild` (Continuous Native Generation)
+/android/
+/ios/
+*.apk
+*.aab
+*.ipa
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.metro-health-check*
+*.tsbuildinfo
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Dati grezzi: vivono sul branch `discovery`, non su main ---------------
+/raw/
+
+# --- Editor e sistema operativo --------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# --- Uscita della pipeline (si pubblica su Pages, non si committa) --------
+/site/
