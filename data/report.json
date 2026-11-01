@@ -1,0 +1,362 @@
+{
+ "errori": [],
+ "conteggi": {
+  "fermate_senza_orario": 59,
+  "azienda:32": 21,
+  "azienda:9": 417,
+  "scartate": 62,
+  "scartate:9": 1,
+  "azienda:10": 58,
+  "azienda:28": 188,
+  "azienda:14": 263,
+  "scartate:14": 11,
+  "azienda:19": 15,
+  "azienda:15": 121,
+  "scartate:15": 3,
+  "sospese": 89,
+  "sospese:15": 9,
+  "azienda:33": 968,
+  "sospese:33": 57,
+  "scartate:33": 2,
+  "azienda:11": 98,
+  "scartate:11": 1,
+  "azienda:17": 86,
+  "azienda:25": 16,
+  "azienda:22": 1044,
+  "scartate:22": 2,
+  "azienda:7": 62,
+  "azienda:24": 40,
+  "scartate:24": 2,
+  "azienda:29": 51,
+  "scartate:29": 12,
+  "azienda:16": 204,
+  "azienda:26": 36,
+  "azienda:12": 268,
+  "azienda:8": 215,
+  "scartate:8": 10,
+  "azienda:21": 57,
+  "azienda:27": 39,
+  "scartate:27": 1,
+  "azienda:18": 383,
+  "scartate:18": 12,
+  "sospese:18": 23,
+  "azienda:13": 16,
+  "scartate:13": 2,
+  "azienda:34": 169,
+  "azienda:35": 29,
+  "azienda:30": 32,
+  "scartate:30": 3
+ },
+ "scartate": [
+  [
+   "300024",
+   "285-B-(R)-1-1-Z11",
+   "orari decrescenti"
+  ],
+  [
+   "140001",
+   "1-A-(A)-1-1-Z22",
+   "orari decrescenti"
+  ],
+  [
+   "140024",
+   "1-A-(R)-1-1-Z22",
+   "orari decrescenti"
+  ],
+  [
+   "140025",
+   "1-A-(R)-1-1-Z22",
+   "orari decrescenti"
+  ],
+  [
+   "140026",
+   "1-A-(R)-1-1-Z22",
+   "orari decrescenti"
+  ],
+  [
+   "140027",
+   "1-A-(R)-1-1-Z22",
+   "orari decrescenti"
+  ],
+  [
+   "140028",
+   "1-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "140029",
+   "1-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "140030",
+   "1-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "140031",
+   "1-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "140032",
+   "1-A-(R)-1-1-Z32",
+   "orari decrescenti"
+  ],
+  [
+   "140018",
+   "1-C-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "120011",
+   "120-A-(R)-2-1-Z11",
+   "orari decrescenti"
+  ],
+  [
+   "120022",
+   "132-B-(R)-22-1-Z11",
+   "orari decrescenti"
+  ],
+  [
+   "120149",
+   "132-B-(R)-24-24-Z11",
+   "orari decrescenti"
+  ],
+  [
+   "200838",
+   "139-A-(A)-4-2-L",
+   "orari decrescenti"
+  ],
+  [
+   "201032",
+   "142-C-(R)-2-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "390067",
+   "270-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "600072",
+   "223-B-(A)-1-1-Z22",
+   "orari decrescenti"
+  ],
+  [
+   "601301",
+   "190-A-(A)-4-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "510006",
+   "202-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "510007",
+   "202-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "660003",
+   "323-A-(R)-1-1-Z21",
+   "orari decrescenti"
+  ],
+  [
+   "660073",
+   "321-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "660074",
+   "321-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "660078",
+   "321-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "660079",
+   "321-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "660006",
+   "322-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "660011",
+   "325-A-(A)-4-3-S",
+   "orari decrescenti"
+  ],
+  [
+   "660012",
+   "325-A-(A)-4-3-S",
+   "orari decrescenti"
+  ],
+  [
+   "660013",
+   "325-A-(A)-4-3-S",
+   "orari decrescenti"
+  ],
+  [
+   "660007",
+   "325-A-(A)-4-4-Z21",
+   "orari decrescenti"
+  ],
+  [
+   "660009",
+   "325-A-(A)-4-4-Z21",
+   "orari decrescenti"
+  ],
+  [
+   "660010",
+   "325-A-(A)-4-4-Z21",
+   "orari decrescenti"
+  ],
+  [
+   "320349",
+   "308-A-(R)-1-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "320345",
+   "304-A-(A)-1-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "320442",
+   "304-A-(A)-1-1-Z39",
+   "orari decrescenti"
+  ],
+  [
+   "320443",
+   "304-A-(A)-1-2-S",
+   "orari decrescenti"
+  ],
+  [
+   "320355",
+   "304-A-(A)-1-4-S",
+   "orari decrescenti"
+  ],
+  [
+   "320087",
+   "306-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "320090",
+   "306-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "320105",
+   "306-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "320092",
+   "306-A-(A)-1-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "320320",
+   "309-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "680004",
+   "368-A-(A)-1-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "100029",
+   "54-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100030",
+   "54-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100032",
+   "54-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100033",
+   "54-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100079",
+   "44-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100632",
+   "44-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100085",
+   "44-A-(R)-1-1-Z34",
+   "orari decrescenti"
+  ],
+  [
+   "100086",
+   "44-A-(R)-2-1-Z34",
+   "orari decrescenti"
+  ],
+  [
+   "100088",
+   "44-A-(R)-2-2-Z31",
+   "orari decrescenti"
+  ],
+  [
+   "100121",
+   "58-A-(R)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "100131",
+   "60-A-(R)-1-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "100475",
+   "43-A-(R)-4-1-S",
+   "orari decrescenti"
+  ],
+  [
+   "380015",
+   "317-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "380017",
+   "318-A-(A)-1-1-L",
+   "orari decrescenti"
+  ],
+  [
+   "650012",
+   "357-A-(R)-2-2-L",
+   "orari decrescenti"
+  ],
+  [
+   "650013",
+   "357-A-(R)-2-2-S",
+   "orari decrescenti"
+  ],
+  [
+   "650015",
+   "359-A-(A)-1-1-L",
+   "orari decrescenti"
+  ]
+ ]
+}
