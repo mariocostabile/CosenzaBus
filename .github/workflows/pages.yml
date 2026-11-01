@@ -1,0 +1,28 @@
+name: pages
+# Pubblica su Pages il branch `dati`, scritto da pipeline/pubblica.ps1.
+# Il build gira su un PC con IP italiano: i runner GitHub (USA) non raggiungono le porte 8083/8801 di CORe.
+on: workflow_dispatch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency: pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dati
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
