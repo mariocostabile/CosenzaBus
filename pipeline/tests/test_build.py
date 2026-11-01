@@ -17,6 +17,7 @@ class TestBuild(unittest.TestCase):
 
     def test_fermate(self):
         self.assertEqual(self.d["stops"]["4162"], ["Autostazione Cosenza", 39.303792, 16.253333])
+        self.assertEqual(self.d["index"]["hub"], {"Autostazione Cosenza": ["4162"], "Pensiline Unical": []})
 
     def test_varianti_e_tipo(self):
         v = self.d["routes"]["varianti"]

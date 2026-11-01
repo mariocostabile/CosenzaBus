@@ -5,7 +5,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from calendario import festivi, maschera
-from hub import fermate_hub, tipo_variante
+from hub import gruppi_hub, tipo_variante
 
 GIORNI = 400
 PUBBLICATI = "https://mariocostabile.github.io/CosenzaBus/data/index.json"
@@ -72,7 +72,8 @@ def normalizza(g: dict, giorno0: date, giorni: int = GIORNI):
             corse.append([str(t["legacyCode"]), vid, 0 if t["travelDirection"] == "outbound" else 1, ci,
                           int(t["periodicity"]["type"] in ("school", "nonSchool")), seq])
             rep[f"azienda:{t['operatorId']}"] += 1
-    hub = fermate_hub(stops)
+    gruppi = gruppi_hub(stops)
+    hub = {sid for ids in gruppi.values() for sid in ids}
     for vid, v in varianti.items():
         v["tipo"] = tipo_variante(v["azienda"], per_var[vid], hub)
     aziende = {str(o["id"]): {"nome": o["name"].strip(), "sito": o.get("website")} for o in g["operatori"]}
@@ -83,7 +84,7 @@ def normalizza(g: dict, giorno0: date, giorni: int = GIORNI):
                       "scuola_nota_fino": fine_scuola.isoformat() if fine_scuola else None,
                       "conteggi": {"aziende": len({v["azienda"] for v in varianti.values()}), "varianti": len(varianti),
                                    "corse": len(corse), "fermate": len(stops)},
-                      "hub": sorted(hub), "fonti": FONTI},
+                      "hub": gruppi, "fonti": FONTI},
             "scartate": scartate}
     return dati, rep
 

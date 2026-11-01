@@ -11,10 +11,10 @@ def metri(la1, lo1, la2, lo2) -> float:
     return 12742000 * asin(sqrt(h))
 
 
-def fermate_hub(stops: dict) -> set:
+def gruppi_hub(stops: dict) -> dict:
     # per distanza, non per nome: ogni azienda ha il suo stop_id e i nomi non sono affidabili
-    return {sid for sid, (_, la, lo) in stops.items()
-            if any(metri(la, lo, h["lat"], h["lon"]) <= h["raggio_m"] for h in CONF["hub"])}
+    return {h["nome"]: sorted(sid for sid, (_, la, lo) in stops.items() if metri(la, lo, h["lat"], h["lon"]) <= h["raggio_m"])
+            for h in CONF["hub"]}
 
 
 def tipo_variante(azienda: str, fermate_corse: list, hub: set) -> str:
